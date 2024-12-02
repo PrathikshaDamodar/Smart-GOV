@@ -4,11 +4,15 @@
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    background-image: url("../assets/images/bg.jpg"); /* Correct path to your image */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
   }
   
-  .card {
-    background: #5188c7;
-    color: #fff;
+  .card-error-page {
+    background: #fff; /* Semi-transparent background for contrast */
+    color: #ff4d4f;
     text-align: center;
     padding: 2rem;
     border-radius: 10px;
@@ -31,7 +35,7 @@
   .error-description {
     font-size: 1rem;
     margin-bottom: 1.5rem;
-    color: #a72828;
+    color: #ff4d4f;
   }
   
   .go-home {

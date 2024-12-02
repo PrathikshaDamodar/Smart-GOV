@@ -11,10 +11,6 @@ header {
     opacity: 1;
 }
 
-body {
-    padding-top: 80px; /* Prevent content from going under the header */
-    margin: 0;
-}
 
 .navbar {
     display: flex;

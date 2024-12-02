@@ -60,9 +60,9 @@ function Home() {
 
             {/* Background Image */}
             
-            <div>
-            <img src={bg} alt='passport'></img>
-            </div>
+            <div className='home-bg'/>
+            
+            
 
             <section className="container">
 
