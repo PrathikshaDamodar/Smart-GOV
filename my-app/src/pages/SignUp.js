@@ -21,9 +21,10 @@ const SignUp = () => {
                 email,
                 password,
             });
+            alert("User registered successfully. Redirecting to Login page!")
             navigate("/user/login")
         } catch (error) {
-            console.log(error.response?.data?.error || "Something went wrong!");
+            alert(error.response?.data?.error || "Something went wrong!");
         }
     };
 

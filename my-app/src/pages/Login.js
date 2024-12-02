@@ -25,7 +25,7 @@ const Login = () => {
       // Redirect after storing the token
       navigate("/home");
     } catch (error) {
-      console.log(error.response ? error.response.data.error : error.message);
+      alert(error.response ? error.response.data.error : error.message);
     }
   };
 

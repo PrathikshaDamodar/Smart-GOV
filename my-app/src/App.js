@@ -13,6 +13,7 @@ import BusinessDetails from "./pages/BusinessDetails";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import ProtectedRoute from "./components/ProtectedRoute";
+import ErrorPage from "./components/ErrorPage";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function AppRoutes() {
         <Route path="/landDetails" element={<ProtectedRoute><LandDetails /></ProtectedRoute>} />
         <Route path="/taxDetails" element={<ProtectedRoute><TaxDetails /></ProtectedRoute>} />
         <Route path="/businessDetails" element={<ProtectedRoute><BusinessDetails /></ProtectedRoute>} />
+        <Route path="*" element={<ProtectedRoute><ErrorPage/></ProtectedRoute>}/>
       </Routes>
     </div>
   );
