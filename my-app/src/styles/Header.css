@@ -27,6 +27,14 @@ header {
     transition: transform 0.3s ease; /* Fixed missing 's' in transition */
 }
 
+/* multilanguage */
+.translate-widget {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
 /* Profile Dropdown */
 .profile-dropdown {
     position: relative;

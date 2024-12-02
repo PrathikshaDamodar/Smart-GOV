@@ -45,7 +45,7 @@ function Header() {
         setData(response.data); 
       } catch (error) {
         console.error("Error fetching data:", error);
-        setData({ name: "Guest" }); 
+        navigate("/user/login");
       }
     };
 
@@ -57,6 +57,38 @@ function Header() {
     navigate("/user/login");
   };
 
+  //Language translation
+  useEffect(() => {
+    const addGoogleTranslateScript = () => {
+      if (!document.querySelector("script[src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit']")) {
+        const script = document.createElement("script");
+        script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    };
+    window.googleTranslateElementInit = () => {
+      if (!document.querySelector('#google_translate_element div')) {
+        new window.google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'en,fr,hi,kn',
+          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+        }, 'google_translate_element');
+      }
+    };
+
+    addGoogleTranslateScript();
+
+    return () => {
+      // Cleanup any existing Google Translate elements
+      const translateElement = document.querySelector('#google_translate_element');
+      if (translateElement) {
+        translateElement.innerHTML = '';
+      }
+    };
+  }, []);
+//end of multi-language
+
   return (
     <div>
       <header>
@@ -67,6 +99,10 @@ function Header() {
           <b><Link className="nav-links" to="/services">Services</Link></b>
           <b><Link className="nav-links" to="/feedback">Feedback</Link></b>
           <b><Link className="nav-links" to="/contact">Contact</Link></b>
+
+          {/* multilanguage */}
+          <div id="google_translate_element" className="translate-widget"></div>
+
 
           <div className={`profile-dropdown ${isDropdownOpen ? 'open' : ''}`}>
             <FaUserCircle className="profile-icon" onClick={toggleDropdown} />

@@ -54,15 +54,10 @@ function Home() {
 
     return (
         <>
-        
-
-            
 
             {/* Background Image */}
-            
-            <div className='home-bg'/>
-            
-            
+
+            <div className='home-bg' />
 
             <section className="container">
 
@@ -81,146 +76,149 @@ function Home() {
                 </div>
 
                 {/* Cards */}
-                <div className="row">
-
-                    {/* Aadhar Card */}
-                    <div className="col-md-4 mb-4">
-                        <div className="card">
-                            <img src={aadharImage} className='photo' alt="Image not found" />
-                            <div className="card-body">
-                                <h5 className="card-title">Adhaar Card</h5>
-                                <p className="card-text">For more details click on the button below.</p>
-                                <button onClick={aadharButton} className='card-button'>More Details</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Pan Card */}
-                    <div className="col-md-4 mb-4">
-                        <div className="card">
-                            <img src={panImage} className='photo' alt="Image not found" />
-                            <div className="card-body">
-                                <h5 className="card-title">Pan Card</h5>
-                                <p className="card-text">For more details click on the button below.</p>
-                                <button onClick={panButton} className='card-button'>More Details</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* DL Card */}
-                    <div className="col-md-4 mb-4">
-                        <div className="card">
-                            <img src={dlImage} className='photo' alt="Image not found" />
-                            <div className="card-body">
-                                <h5 className="card-title">Driving License</h5>
-                                <p className="card-text">For more details click on the button below.</p>
-                                <button onClick={dlButton} className='card-button'>More Details</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Vehicle Registration */}
-                    <div className="col-md-4 mb-4">
-                        <div className="card">
-                            <img src={aadharImage} className='photo' alt="Image not found" />
-                            <div className="card-body">
-                                <h5 className="card-title">Vehicle Registration</h5>
-                                <p className="card-text">For more details click on the button below.</p>
-                                <button onClick={vehicleButton} className='card-button'>More Details</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Voter ID */}
-                    <div className="col-md-4 mb-4">
-                        <div className="card">
-                            <img src={aadharImage} className='photo' alt="Image not found" />
-                            <div className="card-body">
-                                <h5 className="card-title">Voter ID</h5>
-                                <p className="card-text">For more details click on the button below.</p>
-                                <button onClick={voterButton} className='card-button'>More Details</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Passport */}
-                    <div className="col-md-4 mb-4">
-                        <div className="card">
-                            <img src={passportImage} className='photo' alt="Image not found" />
-                            <div className="card-body">
-                                <h5 className="card-title">Passport</h5>
-                                <p className="card-text">For more details click on the button below.</p>
-                                <button onClick={passportButton} className='card-button'>More Details</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Land Registrtion */}
-                    <div className="col-md-4 mb-4">
-                        <div className="card">
-                            <img src={landImage} className='photo' alt="Image not found" />
-                            <div className="card-body">
-                                <h5 className="card-title">Land Registration</h5>
-                                <p className="card-text">For more details click on the button below.</p>
-                                <button onClick={landButton} className='card-button'>More Details</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Taxation & Income Tax Returns */}
-                    <div className="col-md-4 mb-4">
-                        <div className="card">
-                            <img src={taxImage} className='photo' alt="Image not found" />
-                            <div className="card-body">
-                                <h5 className="card-title">Taxation & Income Tax Returns </h5>
-                                <p className="card-text">For more details click on the button below.</p>
-                                <button onClick={taxButton} className='card-button'>More Details</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Business Registration */}
-                    <div className="col-md-4 mb-4">
-                        <div className="card">
-                            <img src={businessImage} className='photo' alt="Image not found" />
-                            <div className="card-body">
-                                <h5 className="card-title">Business Registration</h5>
-                                <p className="card-text">For more details click on the button below.</p>
-                                <button onClick={businessButton} className='card-button'>More Details</button>
-                            </div>
-                        </div>
-                    </div>
-
-                     {/* <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src={aadharImage} className='photo' alt="Image not found" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Taxation & Income Tax Returns </h5>
-                                    <p class="card-text">For more details click on the button below.</p>
-                                    <button onClick={taxButton} className='card-button'>More Details</button>
+                {/* Row 1 */}
+                <div className="container my-5">
+                    <div className="row g-4">
+                        {/* Aadhar Card */}
+                        <div className="col-md-4">
+                            <div className="card h-100">
+                                <img src={aadharImage} className="photo" alt="Aadhar Card" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Aadhar Card</h5>
+                                    <p className="card-text">For more details, click the button below.</p>
+                                    <button onClick={aadharButton} className="card-button">
+                                        More Details
+                                    </button>
                                 </div>
                             </div>
-                        </div> */}
+                        </div>
 
-                        
-
-                        
-
-                        
-                       {/* <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src={aadharImage} className='photo' alt="Image not found" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Taxation & Income Tax Returns </h5>
-                                    <p class="card-text">For more details click on the button below.</p>
-                                    <button onClick={taxButton} className='card-button'>More Details</button>
+                        {/* Pan Card */}
+                        <div className="col-md-4">
+                            <div className="card h-100">
+                                <img src={panImage} className="photo" alt="PAN Card" />
+                                <div className="card-body">
+                                    <h5 className="card-title">PAN Card</h5>
+                                    <p className="card-text">For more details, click the button below.</p>
+                                    <button onClick={panButton} className="card-button">
+                                        More Details
+                                    </button>
                                 </div>
                             </div>
-                        </div>  */}
+                        </div>
 
+                        {/* Driving License */}
+                        <div className="col-md-4">
+                            <div className="card h-100">
+                                <img src={dlImage} className="photo" alt="Driving License" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Driving License</h5>
+                                    <p className="card-text">For more details, click the button below.</p>
+                                    <button onClick={dlButton} className="card-button">
+                                        More Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
+                {/* Row 2 */}
+                <div className="container my-5">
+                    <div className="row g-4">
+                        {/* Aadhar Card */}
+                        <div className="col-md-4">
+                            <div className="card h-100">
+                                <img src={aadharImage} className="photo" alt="Aadhar Card" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Aadhar Card</h5>
+                                    <p className="card-text">For more details, click the button below.</p>
+                                    <button onClick={aadharButton} className="card-button">
+                                        More Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Pan Card */}
+                        <div className="col-md-4">
+                            <div className="card h-100">
+                                <img src={panImage} className="photo" alt="PAN Card" />
+                                <div className="card-body">
+                                    <h5 className="card-title">PAN Card</h5>
+                                    <p className="card-text">For more details, click the button below.</p>
+                                    <button onClick={panButton} className="card-button">
+                                        More Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Driving License */}
+                        <div className="col-md-4">
+                            <div className="card h-100">
+                                <img src={dlImage} className="photo" alt="Driving License" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Driving License</h5>
+                                    <p className="card-text">For more details, click the button below.</p>
+                                    <button onClick={dlButton} className="card-button">
+                                        More Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Row 3 */}
+                <div className="container my-5">
+                    <div className="row g-4">
+                        {/* Aadhar Card */}
+                        <div className="col-md-4">
+                            <div className="card h-100">
+                                <img src={aadharImage} className="photo" alt="Aadhar Card" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Aadhar Card</h5>
+                                    <p className="card-text">For more details, click the button below.</p>
+                                    <button onClick={aadharButton} className="card-button">
+                                        More Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Pan Card */}
+                        <div className="col-md-4">
+                            <div className="card h-100">
+                                <img src={panImage} className="photo" alt="PAN Card" />
+                                <div className="card-body">
+                                    <h5 className="card-title">PAN Card</h5>
+                                    <p className="card-text">For more details, click the button below.</p>
+                                    <button onClick={panButton} className="card-button">
+                                        More Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Driving License */}
+                        <div className="col-md-4">
+                            <div className="card h-100">
+                                <img src={passportImage} className="photo" alt="Driving License" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Driving License</h5>
+                                    <p className="card-text">For more details, click the button below.</p>
+                                    <button onClick={dlButton} className="card-button">
+                                        More Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+   
+        </section ><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        {/* Footer */}
             <div className='footer'>
                 <div className='f-contact'>
                     <b><h1>Contact Us</h1></b>
@@ -269,7 +267,7 @@ function Home() {
 
 
                 <div className='footer-copy' >
-                    Copyright © 2023 Smart Government
+                    Copyright © 2024 Smart Government
                    
                 </div>
 
