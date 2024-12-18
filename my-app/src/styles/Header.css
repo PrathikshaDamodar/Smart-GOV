@@ -1,13 +1,19 @@
 header {
     padding: 20px 60px !important;
-    position: fixed;
+
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(29, 29, 32, 1); /* Ensure header background is visible */
+    color: black;
+    /* Ensure header background is visible */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 10000; /* High z-index to ensure it's above everything */
-    color: white;
+    z-index: 10000;
+    font-family: 'Arial', sans-serif;
+    /* Updated font family */
+    font-size: 18px;
+    /* 
+    /* High z-index to ensure it's above everything */
+
     opacity: 1;
 }
 
@@ -16,6 +22,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: black;
     width: 100%;
 }
 
@@ -24,7 +31,20 @@ header {
     display: flex;
     gap: 40px;
     margin-left: auto !important;
-    transition: transform 0.3s ease; /* Fixed missing 's' in transition */
+    transition: transform 0.3s ease;
+    color: rgb(99, 2, 196);
+    text-decoration: none;
+    /* Fixed missing 's' in transition */
+}
+
+
+
+/* multilanguage */
+.translate-widget {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
 }
 
 /* Profile Dropdown */
@@ -32,7 +52,7 @@ header {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    z-index: 10001; 
+    z-index: 10001;
 }
 
 .profile-icon {
@@ -58,7 +78,8 @@ header {
 }
 
 .profile-dropdown .dropdown-menu {
-    display: none; /* Hides by default */
+    display: none;
+    /* Hides by default */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -70,7 +91,7 @@ header {
     visibility: visible;
 }
 
-.dropdown-text{
+.dropdown-text {
     text-align: center;
 }
 
