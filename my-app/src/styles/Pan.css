@@ -10,15 +10,6 @@
     align-items: center;
 }
 
-.aadhar {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: auto;
-    flex-direction: column;
-    width: 100%;
-}
-
 /* Vehicle Registration Container */
 .vehicle-registration {
     background-color: #fff;
@@ -101,7 +92,6 @@ li strong {
     }
 }
 
-/* Center the video container */
 .video-container {
     display: flex;
     justify-content: center;

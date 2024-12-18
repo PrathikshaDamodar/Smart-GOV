@@ -9,6 +9,8 @@ import passportImage from '../assets/images/passport.png'
 import taxImage from '../assets/images/tax.webp'
 import businessImage from '../assets/images/business-registration.png'
 import landImage from '../assets/images/Land-Registration.png'
+import vehicleImage from '../assets/images/vehicle.png'
+import voterImage from '../assets/images/voter.png'
 
 
 function Home() {
@@ -129,11 +131,11 @@ function Home() {
                         {/* Aadhar Card */}
                         <div className="col-md-4">
                             <div className="card h-100">
-                                <img src={aadharImage} className="photo" alt="Aadhar Card" />
+                                <img src={landImage} className="photo" alt="land registeration" />
                                 <div className="card-body">
-                                    <h5 className="card-title">Aadhar Card</h5>
+                                    <h5 className="card-title">Land Registration</h5>
                                     <p className="card-text">For more details, click the button below.</p>
-                                    <button onClick={aadharButton} className="card-button">
+                                    <button onClick={landButton} className="card-button">
                                         More Details
                                     </button>
                                 </div>
@@ -143,58 +145,12 @@ function Home() {
                         {/* Pan Card */}
                         <div className="col-md-4">
                             <div className="card h-100">
-                                <img src={panImage} className="photo" alt="PAN Card" />
-                                <div className="card-body">
-                                    <h5 className="card-title">PAN Card</h5>
-                                    <p className="card-text">For more details, click the button below.</p>
-                                    <button onClick={panButton} className="card-button">
-                                        More Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                                <img src={vehicleImage} className="photo" alt="Vehicle Registration" />
 
-                        {/* Driving License */}
-                        <div className="col-md-4">
-                            <div className="card h-100">
-                                <img src={dlImage} className="photo" alt="Driving License" />
                                 <div className="card-body">
-                                    <h5 className="card-title">Driving License</h5>
+                                    <h5 className="card-title">Vehicle Registration</h5>
                                     <p className="card-text">For more details, click the button below.</p>
-                                    <button onClick={dlButton} className="card-button">
-                                        More Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Row 3 */}
-                <div className="container my-5">
-                    <div className="row g-4">
-                        {/* Aadhar Card */}
-                        <div className="col-md-4">
-                            <div className="card h-100">
-                                <img src={aadharImage} className="photo" alt="Aadhar Card" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Aadhar Card</h5>
-                                    <p className="card-text">For more details, click the button below.</p>
-                                    <button onClick={aadharButton} className="card-button">
-                                        More Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Pan Card */}
-                        <div className="col-md-4">
-                            <div className="card h-100">
-                                <img src={panImage} className="photo" alt="PAN Card" />
-                                <div className="card-body">
-                                    <h5 className="card-title">PAN Card</h5>
-                                    <p className="card-text">For more details, click the button below.</p>
-                                    <button onClick={panButton} className="card-button">
+                                    <button onClick={vehicleButton} className="card-button">
                                         More Details
                                     </button>
                                 </div>
@@ -206,9 +162,9 @@ function Home() {
                             <div className="card h-100">
                                 <img src={passportImage} className="photo" alt="Driving License" />
                                 <div className="card-body">
-                                    <h5 className="card-title">Driving License</h5>
+                                    <h5 className="card-title">PASSPORT</h5>
                                     <p className="card-text">For more details, click the button below.</p>
-                                    <button onClick={dlButton} className="card-button">
+                                    <button onClick={passportButton} className="card-button">
                                         More Details
                                     </button>
                                 </div>
@@ -216,15 +172,36 @@ function Home() {
                         </div>
                     </div>
                 </div>
-   
-        </section ><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        {/* Footer */}
-            <div className='footer'>
+
+
+                {/* Row 2 */}
+                <div className="container my-5">
+                    <div className="row g-4">
+                        {/* Aadhar Card */}
+                        <div className="col-md-4">
+                            <div className="card h-100">
+                                <img src={voterImage} className="photo" alt="Voter Id" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Voter Id</h5>
+                                    <p className="card-text">For more details, click the button below.</p>
+                                    <button onClick={voterButton} className="card-button">
+                                        More Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section ><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            {/* Footer */}
+            <div id='footer' className='footer'>
                 <div className='f-contact'>
                     <b><h1>Contact Us</h1></b>
 
                 </div>
-                
+
                 <div className='f-contact-details'>
                     <a href="" className="text-white me-4">
                         <i className="fa fa-phone"> 8934472190</i><br /><br />
@@ -237,28 +214,28 @@ function Home() {
                     </a>
                 </div>
             </div>
-                <div className='emojis'>
-                    <section className="text-center mb-3">
-                        <a href="" className="text-white me-4">
-                            <i className="fa fa-facebook-f"></i>
-                        </a>
-                        <a href="" className="text-white me-4">
-                            <i className="fa fa-twitter"></i>
-                        </a>
-                        <a href="" className="text-white me-4">
-                            <i className="fa fa-google"></i>
-                        </a>
-                        <a href="" className="text-white me-4">
-                            <i className="fa fa-instagram"></i>
-                        </a>
-                        <a href="" className="text-white me-4">
-                            <i className="fa fa-linkedin"></i>
-                        </a>
-                        <a href="" className="text-white me-4">
-                            <i className="fa fa-github"></i>
-                        </a>
-                    </section>
-                </div>
+            <div className='emojis'>
+                <section className="text-center mb-3">
+                    <a href="" className="text-white me-4">
+                        <i className="fa fa-facebook-f"></i>
+                    </a>
+                    <a href="" className="text-white me-4">
+                        <i className="fa fa-twitter"></i>
+                    </a>
+                    <a href="" className="text-white me-4">
+                        <i className="fa fa-google"></i>
+                    </a>
+                    <a href="" className="text-white me-4">
+                        <i className="fa fa-instagram"></i>
+                    </a>
+                    <a href="" className="text-white me-4">
+                        <i className="fa fa-linkedin"></i>
+                    </a>
+                    <a href="" className="text-white me-4">
+                        <i className="fa fa-github"></i>
+                    </a>
+                </section>
+            </div>
 
 
 
@@ -266,13 +243,13 @@ function Home() {
 
 
 
-                <div className='footer-copy' >
-                    Copyright © 2024 Smart Government
-                   
-                </div>
+            <div className='footer-copy' >
+                Copyright © 2024 Smart Government
+
+            </div>
 
 
-            
+
         </>
     )
 

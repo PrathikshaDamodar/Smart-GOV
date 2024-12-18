@@ -5,9 +5,10 @@ import { FaUserCircle } from 'react-icons/fa';
 import axios from 'axios';
 
 function Header() {
-  const [data, setData] = useState(null); // State to store the JSON response
-  const navigate = useNavigate();
+  const [data, setData] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // Loading state for data fetching
+  const navigate = useNavigate();
 
   const toggleDropdown = (e) => {
     e.stopPropagation(); // Prevents bubbling so dropdown stays open
@@ -39,10 +40,11 @@ function Header() {
       try {
         const response = await axios.get("http://localhost:5000/user/name", {
           headers: {
-            Authorization: `${token}`, 
+            Authorization: `${token}`,
           },
         });
-        setData(response.data); 
+        setData(response.data);
+        setIsLoading(false); // Stop loading once data is fetched
       } catch (error) {
         console.error("Error fetching data:", error);
         navigate("/user/login");
@@ -50,7 +52,7 @@ function Header() {
     };
 
     fetchData();
-  }, [navigate]); 
+  }, [navigate]);
 
   const handleLogoutClick = () => {
     localStorage.clear();
@@ -71,7 +73,7 @@ function Header() {
       if (!document.querySelector('#google_translate_element div')) {
         new window.google.translate.TranslateElement({
           pageLanguage: 'en',
-          includedLanguages: 'en,fr,hi,kn',
+          includedLanguages: 'en,hi,kn,te,ta',
           layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
         }, 'google_translate_element');
       }
@@ -80,14 +82,20 @@ function Header() {
     addGoogleTranslateScript();
 
     return () => {
-      // Cleanup any existing Google Translate elements
       const translateElement = document.querySelector('#google_translate_element');
       if (translateElement) {
         translateElement.innerHTML = '';
       }
     };
   }, []);
-//end of multi-language
+  //end of multi-language
+
+  const scrollToFooter = () => {
+    const footer = document.getElementById('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div>
@@ -98,17 +106,16 @@ function Header() {
           <b><Link className="nav-links" to="/handbook">Handbook</Link></b>
           <b><Link className="nav-links" to="/services">Services</Link></b>
           <b><Link className="nav-links" to="/feedback">Feedback</Link></b>
-          <b><Link className="nav-links" to="/contact">Contact</Link></b>
+          <b><Link className="nav-links" onClick={scrollToFooter}>Contact</Link></b>
 
           {/* multilanguage */}
           <div id="google_translate_element" className="translate-widget"></div>
-
 
           <div className={`profile-dropdown ${isDropdownOpen ? 'open' : ''}`}>
             <FaUserCircle className="profile-icon" onClick={toggleDropdown} />
             <div className="dropdown-menu">
               <p className="dropdown-text">
-                Hi! {data && data.name ? data.name : "Guest"}
+                Hi! {isLoading ? "Loading..." : (data && data.name ? data.name : "Guest")}
               </p>
               <button onClick={handleLogoutClick} className="logout-btn">Logout</button>
             </div>
